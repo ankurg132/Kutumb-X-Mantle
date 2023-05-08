@@ -12,10 +12,10 @@ const SubscribePage = () => {
       const provider = new ethers.providers.JsonRpcProvider(process.env.REACT_APP_RPC_URL || '');
       const signer = new ethers.Wallet(process.env.REACT_APP_PRIVATE_KEY || '', provider);
 
-      const contract = new ethers.Contract(process.env.REACT_APP_CONTRACT_ADDRESS || '', subscribe.abi, signer);
+      // const contract = new ethers.Contract(process.env.REACT_APP_CONTRACT_ADDRESS || '', subscribe.abi, signer);
 
-      const receipt = await contract.subscribe(email);
-      console.log(receipt);
+      // const receipt = await contract.subscribe(email);
+      // console.log(receipt);
 
       setSubscribed(true);
       setStatus('Subscribed successfully!');
